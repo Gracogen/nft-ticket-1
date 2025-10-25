@@ -2,7 +2,8 @@ import React from "react";
 import profile from "../assets/react.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faBell, faSignal, faWifi } from "@fortawesome/free-solid-svg-icons";
-import {not, john} from "../assets/not.png";
+import not from "../assets/not.png";
+import john from "../assets/profile-pic.png"
 
 export default function TopHeader() {
   return (
