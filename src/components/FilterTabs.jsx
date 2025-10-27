@@ -6,7 +6,7 @@ export default function FilterTabs() {
 
   return (
     <div>
-      <div className="flex gap-3 overflow-x-auto pb-2">
+      <div className="flex gap-3 overflow-x-auto text-[#8B8B8B] scrollbar-hide pb-2">
         {tabs.map((t) => (
           <button
             key={t}
@@ -14,7 +14,7 @@ export default function FilterTabs() {
             className={`px-4 py-2 rounded-full text-sm ${
               active === t
                 ? "bg-[#7148E5] text-white"
-                : "bg-purple-100 text-gray-700"
+                : "bg-[#FAFAFA] text-gray-700"
             }`}
           >
             {t}

@@ -1,7 +1,5 @@
-import React from "react";
-import profile from "../assets/react.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faBell, faSignal, faWifi } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faBatteryFull, faBell, faSignal, faWifi } from "@fortawesome/free-solid-svg-icons";
 import not from "../assets/not.png";
 import john from "../assets/profile-pic.png"
 
@@ -9,12 +7,12 @@ export default function TopHeader() {
   return (
     <>
     <div>
-        <div className="w-91.7 h-4 flex justify-between bg-black text-white" >
-            <div className="nav-time text-[12px]">11.45</div>
-            <div className="nav-icon">
-                <FontAwesomeIcon icon={faSignal} className="w-3" />
-                <FontAwesomeIcon icon={faWifi} className="w-4" />
-                <FontAwesomeIcon icon={faBars} className="w-5"/>
+        <div className="w-91.7 h-4 flex justify-between text-white" >
+            <div className="nav-time text-sm">11.45</div>
+            <div className="nav-icon flex gap-1">
+                <FontAwesomeIcon icon={faSignal} className="size-xs" />
+                <FontAwesomeIcon icon={faWifi} className="size-xs" />
+                <FontAwesomeIcon icon={faBatteryFull} className="size-xs"/>
             </div>
         </div>
     <div className="flex items-center mt-6 justify-between">
@@ -39,3 +37,5 @@ export default function TopHeader() {
     </>
   );
 }
+
+
