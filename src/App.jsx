@@ -10,6 +10,7 @@ import EventCard from "./components/EventCard";
 import Homepage from "./pages/HomePage";
 import ProfileSetup from "./components/ProfileSetup";
 import MarketPlace from "./pages/MarketPlace";
+import Events from "./pages/Events";
 // import ProfileSetup from "./pages/ProfileSetup"; // example additional page
 
 export default function App() {
@@ -26,6 +27,7 @@ export default function App() {
       {/* Profile Setup Page */}
       <Route path="/profile-setup" element={<ProfileSetup />} />
       <Route path="/marketplace" element={<MarketPlace />} />
+      <Route path="/events" element={<Events />} />
     </Routes>
   );
 }

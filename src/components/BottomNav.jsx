@@ -1,36 +1,74 @@
 import { faCalendarDays, faHouse, faTicket, faStore, faGear } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 
 export default function BottomNav() {
   return (
+
     <nav className="fixed bottom-4 left-4 right-4 bg-white rounded-2xl shadow-md p-3 flex justify-between items-center md:hidden">
-      <button className="flex flex-col gap-0.5 items-center text-xs text-[#7148E5]">
-        <FontAwesomeIcon icon={faHouse}  className="text-lg" />
+      <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          `flex flex-col gap-0.5 items-center text-xs ${
+            isActive ? "text-[#7148E5]" : "text-gray-400"
+          }`
+        }
+      >
+        <FontAwesomeIcon icon={faHouse} className="text-lg" />
         <span className="text-sm">Home</span>
-      </button>
+      </NavLink>
 
-      <button className="flex flex-col gap-0.5 items-center text-xs text-gray-400">
-        <FontAwesomeIcon icon={faCalendarDays}  className=" text-lg" />
+      <NavLink
+        to="/events"
+        className={({ isActive }) =>
+          `flex flex-col gap-0.5 items-center text-xs ${
+            isActive ? "text-[#7148E5]" : "text-gray-400"
+          }`
+        }
+      >
+        <FontAwesomeIcon icon={faCalendarDays} className="text-lg" />
         <span className="text-sm">Events</span>
-      </button>
+      </NavLink>
 
-      <button className="flex flex-col gap-0.5 items-center text-xs text-gray-400">
-          <FontAwesomeIcon icon={faTicket}  className="text-lg font-light" />
+      <NavLink
+        to="/tickets"
+        className={({ isActive }) =>
+          `flex flex-col gap-0.5 items-center text-xs ${
+            isActive ? "text-[#7148E5]" : "text-gray-400"
+          }`
+        }
+      >
+        <FontAwesomeIcon icon={faTicket} className="text-lg font-light" />
         <span className="text-sm">Ticket</span>
-      </button>
+      </NavLink>
 
-      <Link to="/marketplace" className="flex active:text-blue-800 flex-col gap-0.5 items-center text-xs text-gray-400">
-        <FontAwesomeIcon icon={faStore}  className="text-lg" />
+      <NavLink
+        to="/marketplace"
+        className={({ isActive }) =>
+          `flex flex-col gap-0.5 items-center text-xs ${
+            isActive ? "text-[#7148E5]" : "text-gray-400"
+          }`
+        }
+      >
+        <FontAwesomeIcon icon={faStore} className="text-lg" />
         <span className="text-sm">Marketplace</span>
-      </Link>
+      </NavLink>
 
-      <Link to="/profile-setup" className="flex flex-col gap-0.5 items-center text-xs text-gray-400">
-         <FontAwesomeIcon icon={faGear}  className="text-lg" />
+      <NavLink
+        to="/profile-setup"
+        className={({ isActive }) =>
+          `flex flex-col gap-0.5 items-center text-xs ${
+            isActive ? "text-[#7148E5]" : "text-gray-400"
+          }`
+        }
+      >
+        <FontAwesomeIcon icon={faGear} className="text-lg" />
         <span className="text-sm">Settings</span>
-      </Link>
+      </NavLink>
     </nav>
   );
 }
+
