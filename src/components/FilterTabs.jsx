@@ -22,9 +22,7 @@ export default function FilterTabs() {
         ))}
       </div>
 
-      <h3 className="mt-5 text-sm text-gray-700 font-semibold">
-        Featured Events
-      </h3>
+      
     </div>
   );
 }

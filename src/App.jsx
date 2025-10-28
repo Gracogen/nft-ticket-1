@@ -7,8 +7,9 @@ import FilterTabs from "./components/FilterTabs";
 import FeaturedEvents from "./components/FeaturedEvents";
 import BottomNav from "./components/BottomNav";
 import EventCard from "./components/EventCard";
-import Homepage from "./components/HomePage";
+import Homepage from "./pages/HomePage";
 import ProfileSetup from "./components/ProfileSetup";
+import MarketPlace from "./pages/MarketPlace";
 // import ProfileSetup from "./pages/ProfileSetup"; // example additional page
 
 export default function App() {
@@ -21,10 +22,10 @@ export default function App() {
           <Homepage />
         }
       />
-      {/* <Route path="/" /> */}
 
       {/* Profile Setup Page */}
       <Route path="/profile-setup" element={<ProfileSetup />} />
+      <Route path="/marketplace" element={<MarketPlace />} />
     </Routes>
   );
 }

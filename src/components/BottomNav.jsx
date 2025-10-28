@@ -1,5 +1,4 @@
 import { faCalendarDays, faHouse, faTicket, faStore, faGear } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 
@@ -23,10 +22,10 @@ export default function BottomNav() {
         <span className="text-sm">Ticket</span>
       </button>
 
-      <button className="flex flex-col gap-0.5 items-center text-xs text-gray-400">
+      <Link to="/marketplace" className="flex active:text-blue-800 flex-col gap-0.5 items-center text-xs text-gray-400">
         <FontAwesomeIcon icon={faStore}  className="text-lg" />
         <span className="text-sm">Marketplace</span>
-      </button>
+      </Link>
 
       <Link to="/profile-setup" className="flex flex-col gap-0.5 items-center text-xs text-gray-400">
          <FontAwesomeIcon icon={faGear}  className="text-lg" />

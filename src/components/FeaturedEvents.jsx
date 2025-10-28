@@ -13,6 +13,9 @@ const events = [
 const FeaturedEvents = () => {
   return (
     <div className="mt-4">
+      <h3 className="mt-5 text-sm text-gray-700 font-semibold">
+        Featured Events
+      </h3>
       <div className="flex overflow-x-auto space-x-4 px-4 scrollbar-hide">
         {events.map((event) => (
           <div key={event.id} className="w-59.5 px-1.2 pt-5 pb-8 bg-white rounded-2xl shadow-md shrink-0">

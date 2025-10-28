@@ -12,8 +12,8 @@ const ProfileSetup = () => {
     <div className="min-h-screen bg-linear-to-r from-[#7148E5] to-[#4322A1] flex flex-col">
       
       {/* Gradient Header */}
-      <div className=" h-33 pt-7 text-white flex-col flex  px-6 ">
-         <div className="w-91.7 h-4 flex justify-between text-white" >
+      <div className=" h-33 pt-7 text-white flex-col flex px-6 ">
+         <div className="w-91.7 h-4 flex justify-between text-white">
             <div className="nav-time text-sm text-white">11.45</div>
             <div className="nav-icon flex gap-1">
                 <FontAwesomeIcon icon={faSignal} className="size-xs" />
