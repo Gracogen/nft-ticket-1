@@ -12,16 +12,16 @@ const events = [
 
 const FeaturedEvents = () => {
   return (
-    <div className="mt-4">
+    <div>
       <h3 className="mt-5 text-sm text-gray-700 font-semibold">
         Featured Events
       </h3>
-      <div className="flex overflow-x-auto space-x-4 px-4 scrollbar-hide">
+      <div className="flex p-4 overflow-x-auto space-x-4 scrollbar-hide">
         {events.map((event) => (
-          <div key={event.id} className="w-59.5 px-1.2 pt-5 pb-8 bg-white rounded-2xl shadow-md shrink-0">
+          <div key={event.id} className="w-59.5 px-1 pt-5 pb-4 bg-white rounded-2xl shadow-md shrink-0">
             <img src={event.image} alt={event.title} className="rounded-t-2xl w-57 h-36.25 object-cover" />
-            <div className="p-3 py-3.16 flex flex-col gap-1 px-5">
-              <div className="list-header flex justify-between">
+            <div className="pt-3 flex flex-col gap-1 px-1.5">
+              <div className="list-header flex justify-between ">
               <p className="font-semibold text-[#646464]">{event.title}</p>
               <p className="font-semibold text-sm text-[#7148E5]">{event.price}</p>
              </div>

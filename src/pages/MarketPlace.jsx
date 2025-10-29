@@ -33,13 +33,14 @@ const MarketPlace = () => {
             <FontAwesomeIcon icon={faBatteryFull} className="size-xs" />
           </div>
         </div>
-        <div className="flex items-center my-9 justify-center gap-32">
+        <div className="flex items-center mt-5.5 justify-center gap-32">
           <h2 className="text-lg font-semibold">Marketplace</h2>
         </div>
       </div>
 
+
       {/* */}
-      <div className="-mt-6 bg-white rounded-t-3xl shadow-md px-4 pt-6 flex-1">
+      <div className=" bg-white rounded-t-3xl shadow-md pt-6 flex-1">
         <div className="flex gap-3 overflow-x-auto text-[#8B8B8B] scrollbar-hide pb-2">
           {tabs.map((t) => (
             <button
@@ -59,9 +60,9 @@ const MarketPlace = () => {
 
 
       <div className="flex justify-center">
-        <div className=" px-2 py-2 bg-white w-90 rounded-t-3xl shadow-sm ">
-          <img src={reactpic} alt="title" className="rounded-t-2xl w-57 m-1 h-36.25 object-cover" />
-          <div className="p-3 py-3.16 flex flex-col gap-1 px-5">
+        <div className=" p-1 mt-2 bg-white w-90 rounded-t-3xl shadow-sm ">
+          <img src={reactpic} alt="title" className="rounded-t-2xl w-57 m-1 h-36.25 object-center object-cover" />
+          <div className="py-3 flex flex-col gap-1 px-5">
             <div className="list-header flex justify-between">
               <p className="font-semibold text-[12px] text-[#646464]">Birdie</p>
               <div className="flex gap-1">
@@ -93,9 +94,9 @@ const MarketPlace = () => {
 
       </div>
 
-       <div className="grid grid-cols-2 w-full mt-2.5 overflow-x-auto space-x-4 pb-25 scrollbar-hide">
+       <div className="flex justify-between px-3 flex-wrap overflow-x-auto pb-25 scrollbar-hide">
         {events.map((event) => (
-          <div key={event.id} className=" px-3 pt-5 pb-2 bg-white rounded-2xl shadow-md shrink-0">
+          <div key={event.id} className="px-1.5 py-2 mt-4 w-[48%] bg-white rounded-2xl shadow-md shrink-0">
             <img src={event.image} alt={event.title} className="rounded-t-2xl w-57 h-36.25 object-cover" />
             <div className=" py-3.16 flex flex-col gap-1 ">
               <div className="list-header  mt-2 flex justify-between">
@@ -115,13 +116,14 @@ const MarketPlace = () => {
               </div>
             </div>
               </div>
-             
+           
               <button className="mt-3 w-full bg-[#7148E5] text-white py-2 rounded-full text-sm font-medium">
                 Buy
               </button>
+              </div>
+           
             
-            
-          </div>
+       
         ))}
       </div>
 
