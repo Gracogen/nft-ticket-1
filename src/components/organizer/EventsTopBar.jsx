@@ -1,20 +1,39 @@
 // src/components/EventsTopBar.jsx
-import React from "react";
+import { useState } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import CreateEventMiniPage from "./CreateEventMiniPage";
 import { faMagnifyingGlass, faCalendar, faFilter, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function EventsTopBar({ onCreate, search, setSearch, category, setCategory, date, setDate }) {
+
+  const [isCreateEventOpen, setIsCreateEventOpen] = useState(false)
+
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between">
         <h1 className="text-2xl font-semibold text-gray-800">Events</h1>
+
         <button
-          onClick={onCreate}
           className="inline-flex items-center gap-2 bg-linear-to-r from-[#7148E5] to-[#4322A1] text-white px-4 py-2 rounded-lg shadow"
+          onClick={() => setIsCreateEventOpen(true)}
         >
           <FontAwesomeIcon icon={faPlus} />
           Create Event
         </button>
+
+
+        {/* Render the mini-page when the button is clicked */}
+        {isCreateEventOpen && (
+          <>
+            <div
+              className="fixed inset-0 bg-[#0000008a]  z-40"
+              onClick={() => setIsCreateEventOpen(false)}
+            ></div>
+
+            <CreateEventMiniPage onClose={() => setIsCreateEventOpen(false)} />
+          </>
+        )}
+
       </div>
 
       <div className="flex flex-col md:flex-row md:items-center md:gap-4">

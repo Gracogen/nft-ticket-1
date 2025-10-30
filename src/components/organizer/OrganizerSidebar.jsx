@@ -1,5 +1,6 @@
 // src/components/OrganizerSidebar.jsx
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const navItems = [
   { key: "dashboard", label: "Dashboard", to: "/organizer/dashboard" },
@@ -9,6 +10,10 @@ const navItems = [
 ];
 
 export default function OrganizerSidebar() {
+
+  const [isActive] = useState(true);
+
+
   return (
     <aside className="w-64 bg-white border-r border-gray-100 min-h-screen hidden md:block">
       <div className="px-6 py-6">
@@ -33,7 +38,7 @@ export default function OrganizerSidebar() {
             >
               {/* Simple square icon placeholder */}
               <span className={`w-8 h-8 rounded-md flex items-center justify-center mr-3 ${/* color for icon bg */ ""}`}>
-                <svg width="16" height="16" fill="currentColor" className={isActive => (isActive ? "text-[#7148E5]" : "text-gray-400")}>
+                <svg width="16" height="16" fill="currentColor" className={isActive ? "text-[#7148E5]" : "text-gray-400"}>
                   <rect width="16" height="16" rx="2" />
                 </svg>
               </span>
